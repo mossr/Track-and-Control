@@ -15,9 +15,10 @@ Software Design and Development
 
 - Download [CMake](http://www.cmake.org/files/v2.8/cmake-2.8.12.1-win32-x86.exe "CMake") and click **Add CMake to the system PATH for all users** during the installation.
 - Download [OpenCV](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.8/opencv-2.4.8.exe/download "OpenCV") version 2.4.8.
-	- Put the *opencv* folder into your <Track-and-Control directory>.
+	- Put the *opencv* folder into your *Track-and-Control* directory.
 - Run the *build\_project.bat* file (this builds the Visual Studio project with CMake).
 - Now you can open **tracking\_module\_build/Debug/TrackingModule.exe** or the Visual Studio project.
+
 * * * 
 
 **Notes:** 
