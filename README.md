@@ -17,7 +17,6 @@ Software Design and Development with Professor **[Pierre Elysee](mailto:elyseep@
 - Run the *build\_project.bat* file (this builds the Visual Studio project with CMake).
 - Now you can open **tracking\_module\_build/Debug/TrackingModule.exe** or the Visual Studio project.
 
-
 ## Notes
 
 ###### FRONT_END
@@ -38,7 +37,7 @@ Software Design and Development with Professor **[Pierre Elysee](mailto:elyseep@
 		- Facial recognition
 			- OpenCV
 			- No external hardware necessary
-- **Window Manager Module** (WMM)
+- **Window Controller** (WC)
 	- Window Viewer (3D)
 	- Window Grid Organizer
 		- Left, Right, Top, Bottom, and Middle.
@@ -54,6 +53,5 @@ Software Design and Development with Professor **[Pierre Elysee](mailto:elyseep@
 
 ## Ideas/Features
 
-- TODO: Include these.
-
-
+###### TODO
+- Include objectives.
