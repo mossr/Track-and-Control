@@ -47,7 +47,7 @@ Software Design and Development with Professor **[Pierre Elysee](mailto:elyseep@
 		- Off screen delay
 		- Sleep or screen dim (user setting)
 	- All features have a user defined hot key
-	- 
+
 ###### BACK-EN
 - [SQLite](http://www.sqlite.org/download.html "SQLite1") for settings.
 
