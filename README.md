@@ -7,8 +7,7 @@ Software Design and Development with Professor **[Pierre Elysee](mailto:elyseep@
 - **[Aaron Pereira](mailto:pereiraa1@wit.edu)** <sup><sup>(1)</sup></sup>
 - **[Matthew Shrago](mailto:shragom@wit.edu)** <sup><sup>(1)</sup></sup>
 
-
-	<sup><sup>(1) Wentworth Institute of Technology | Boston, MA</sup></sup>
+<sup><sup>(1) Wentworth Institute of Technology | Boston, MA</sup></sup>
 
 ## Installation
 
