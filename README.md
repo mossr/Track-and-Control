@@ -43,9 +43,14 @@ Software Design and Development
 	- Window Viewer (3D)
 	- Window Grid Organizer
 		- Left, Right, Top, Bottom, and Middle.
+		- hot key + shift = full grid view.
 	- Sleep Manager
 		- Off screen delay
 		- Sleep or screen dim (user setting)
 	- All features have a user defined hot key
+
+**Ideas/Features:**
+
+- TODO: Include these.
 
 
