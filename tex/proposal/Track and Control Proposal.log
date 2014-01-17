@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.8.4)  16 JAN 2014 17:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.8.4)  17 JAN 2014 01:36
 entering extended mode
 **Track*and*Control*Proposal.tex
 
-("C:\Users\mossr\Desktop\WIT\COMP566 (Software Dev w-Pierre)\Track and Control\
-Track and Control Proposal.tex"
+("C:\Users\mossr\Desktop\WIT\COMP566 (Software Dev w-Pierre)\Track-and-Control\
+tex\proposal\Track and Control Proposal.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -155,8 +155,8 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen118
 \Gin@req@width=\dimen119
 )
-("C:\Users\mossr\Desktop\WIT\COMP566 (Software Dev w-Pierre)\Track and Control\
-Track and Control Proposal.aux")
+("C:\Users\mossr\Desktop\WIT\COMP566 (Software Dev w-Pierre)\Track-and-Control\
+tex\proposal\Track and Control Proposal.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -187,21 +187,21 @@ LaTeX Font Info:    ... okay on input line 18.
 ) [1
 
 {C:/Users/mossr/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\mossr\Desktop\WIT\COMP566 (Software Dev w-Pierre)\Track and Control\
-Track and Control Proposal.aux") ) 
+("C:\Users\mossr\Desktop\WIT\COMP566 (Software Dev w-Pierre)\Track-and-Control\
+tex\proposal\Track and Control Proposal.aux") ) 
 Here is how much of TeX's memory you used:
  2963 strings out of 493921
- 40311 string characters out of 3147283
+ 40402 string characters out of 3147283
  96918 words of memory out of 3000000
  6273 multiletter control sequences out of 15000+200000
  6207 words of font info for 23 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,32p,1044b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r17.pfb>
-Output written on "Track and Control Proposal.pdf" (1 page, 38755 bytes).
+ 27i,6n,32p,1024b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr17.pfb>
+Output written on "Track and Control Proposal.pdf" (1 page, 38812 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
