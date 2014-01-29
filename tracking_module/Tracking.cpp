@@ -26,12 +26,12 @@ using namespace std;
 //these will be changed using trackbars
 
 ////Defaults
-//int H_MIN = 0;
-//int H_MAX = 256;
-//int S_MIN = 0;
-//int S_MAX = 256;
-//int V_MIN = 0;
-//int V_MAX = 256;
+int H_MIN = 0;
+int H_MAX = 256;
+int S_MIN = 0;
+int S_MAX = 256;
+int V_MIN = 0;
+int V_MAX = 256;
 
 
 // Hat at Matts
@@ -55,12 +55,12 @@ int V_MAX = 256;
 */
 
 // Angels Hat red
-int H_MIN = 0;
+/*int H_MIN = 0;
 int H_MAX = 256;
 int S_MIN = 91;
 int S_MAX = 256;
 int V_MIN = 105;
-int V_MAX = 247;
+int V_MAX = 247;*/
 
 
 //default capture width and height
@@ -176,7 +176,7 @@ void setMiddle(int x, int y) {
 		if(_y < 0)	
 			_y = y;
 
-		//moveWindow(windowName, x * RATIO_WIDTH, y);
+		moveWindow(windowName, x * RATIO_WIDTH, y);
 
 		//Find window by handle name (also see EnumDesktopWindows())
 		int x_update = RATIO_WIDTH * (x - _x);
@@ -349,9 +349,11 @@ int main(int argc, char* argv[])
 	//some boolean variables for different functionality within this
 	//program
     bool trackObjects = true;
-    bool useMorphOps = true;
+    bool useMorphOps = false;
 	//Matrix to store each frame of the webcam feed
 	Mat cameraFeed;
+	//background matrix (for subtraction)
+	Mat background;
 	//matrix storage for HSV image
 	Mat HSV;
 	//matrix storage for binary threshold image
@@ -359,7 +361,7 @@ int main(int argc, char* argv[])
 	//x and y values for the location of the object
 	int x=0, y=0;
 	//create slider bars for HSV filtering
-	//createTrackbars();
+	createTrackbars();
 	//video capture object to acquire webcam feed
 	VideoCapture capture;
 	//open capture object at location zero (default location for webcam)
@@ -373,11 +375,14 @@ int main(int argc, char* argv[])
 	//Set grid windows
 	setGrid();
 
+	capture.read(background);
+
 	while(1){
 		//store image to matrix
 		capture.read(cameraFeed);
 		//convert frame from BGR to HSV colorspace
 		cvtColor(cameraFeed,HSV,COLOR_BGR2HSV);
+		//new subtracted matrix
 		//filter HSV image between values and store filtered image to
 		//threshold matrix
 		inRange(HSV,Scalar(H_MIN,S_MIN,V_MIN),Scalar(H_MAX,S_MAX,V_MAX),threshold);
@@ -395,8 +400,8 @@ int main(int argc, char* argv[])
 		//flip(cameraFeed, cameraFeed, 1);
 
 		//show frames 
-		//imshow(windowName2,threshold);
-		//imshow(windowName,cameraFeed);
+		imshow(windowName2,threshold);
+		imshow(windowName,cameraFeed);
 		//imshow(windowName1,HSV);
 		
 
