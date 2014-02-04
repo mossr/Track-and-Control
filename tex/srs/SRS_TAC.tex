@@ -1,5 +1,7 @@
 \documentclass[titlepage]{article}
 
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage[toc,page]{appendix}
@@ -46,55 +48,109 @@ The following Software Requirements Specification has been accepted and approved
 \newpage
 
 \section{Introduction}
-The introduction to the Software Requirement Specification (SRS) document should provide an overview of the complete SRS document.  While writing this document please remember that this document should contain all of the information needed by a software engineer to adequately design and implement the software product described by the requirements listed in this document.   (Note: the following subsection annotates are largely taken  from the IEEE Guide to SRS).
+
+%The introduction to the Software Requirement Specification (SRS) document should provide an overview of the complete SRS document.  While writing this document please remember that this document should contain all of the information needed by a software engineer to adequately design and implement the software product described by the requirements listed in this document.   (Note: the following subsection annotates are largely taken  from the IEEE Guide to SRS).
 
 \subsection{Purpose}
-What is the purpose of this SRS and the (intended) audience for which it is written.
+The Software Requirement Specification (SRS) for the Track and Control System will explain in detail necessary features that the client purposes and the developers provide. The user base will be focused on anyone who will want to use their computer in a more efficient way and take advantage of their full screen space. 
+
+%What is the purpose of this SRS and the (intended) audience for which it is written.
 
 \subsection{Scope}
-This subsection should:
 \begin{enumerate}
-  \item Identify the software product(s) to be produced by name; for example, Host DBMS, Report Generator, etc
-  \item Explain what the software product(s) will, and, if necessary, will not do
-  \item Describe the application of the software being specified. As a portion of this, it should:
+	\item Track and Control System
   \begin{enumerate}
-  	\item Describe all relevant benefits, objectives, and goals as precisely as possible. For example, to say that one goal is to provide effective reporting capabilities is not as good as saying parameter-driven, user-definable reports with a 2 h turnaround and on-line entry of user parameters.
-  	\item Be consistent with similar statements in higher-level specifications (for example, the System Requirement Specification) , if they exist.What is the scope of this software product.
-  \end{enumerate}
+  	\item The software will track a user's movements and be able to control numerous features around their Desktop with the movement of their head.
+  	\begin{enumerate} 	 	
+  		\item The everyday computer user will utilize this software to organize their cluttered Desktop.  	
+  	\end{enumerate}
+  	\item The application will also act as a security monitor to recognize when you're present at your computer and lock your screen accordingly.
+  	\begin{enumerate}
+  		\item A benefit of this will be a sense of security for the user when they're away from their computer.
+  	\end{enumerate}
+  \end{enumerate} 
 \end{enumerate}
+  %\begin{enumerate}
+  	%\item Describe all relevant benefits, objectives, and goals as precisely as possible. For example, to say that one goal is to provide effective reporting capabilities is not as good as saying parameter-driven, user-definable reports with a 2 h turnaround and on-line entry of user parameters.
+  	%\item Be consistent with similar statements in higher-level specifications (for example, the System Requirement Specification) , if they exist.What is the scope of this software product.
+  %\end{enumerate}
 
 
 \subsection{Definitions, Acronyms, and Abbreviations}
-This subsection should provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS. This information may be provided by reference to one or more appendixes in the SRS or by reference to other documents.
+\begin{itemize}
+	\item Application Specific Definitions
+	\begin{itemize}
+		\item TACS - Track and Control System
+		\item TM - Tracking Module
+		\item WCM - Windows Control Module
+		\item SM - Settings Module
+	\end{itemize}
+	\item Industry Definitions
+	\begin{itemize}
+		\item OpenCV - Open Computer Vision: An open source library for object tracking via the camera.
+		\item SQLite - A lightweight, low maintenance, self contained database.
+		\item RGB - Red, Green, Blue color values.
+		\item HSV - Hue, Saturation, Value.
+		\item API - Application Programming Interface
+		\item C++ - An object oriented programming language.
+		\item GUI - Graphical User Interface
+		\item QT - An API for building GUIs
+	\end{itemize}
+\end{itemize}
+%This subsection should provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS. This information may be provided by reference to one or more appendixes in the SRS or by reference to other documents.
 
 \subsection{References}
-This subsection should:
+The list of references below are software documentation that we will be using:
 \begin{enumerate}
-	\item Provide a complete list of all documents referenced elsewhere in the SRS, or in a separate, specified document.
-	\item Identify each document by title, report number - if applicable - date, and publishing organization.
-	\item Specify the sources from which the references can be obtained. 
-This information may be provided by reference to an appendix or to another document.
+	\item OpenCV documentation: \href{http://opencv.org/}{\color{blue} http://opencv.org/}
+	\item Windows API Index: \href{http://msdn.microsoft.com/en-us/library/hh920508(v=vs.85).aspx}{\color{blue} http://msdn.microsoft.com/en-us/library/hh920508(v=vs.85).aspx}
+	\item QT C++ documentation: \href{http://qt-project.org/}{\color{blue} http://qt-project.org/}
 \end{enumerate}
+%This subsection should:
+%\begin{enumerate}
+	%\item Provide a complete list of all documents referenced elsewhere in the SRS, or in a separate, specified document.
+	%\item Identify each document by title, report number - if applicable - date, and publishing organization.
+	%\item Specify the sources from which the references can be obtained. 
+%This information may be provided by reference to an appendix or to another document.
+%\end{enumerate}
 
 \subsection{Overview}
-This subsection should:
+The rest of the SRS will contain:
 \begin{enumerate}
-	\item Describe what the rest of the SRS contains
-	\item Explain how the SRS is organized.
+	\item Specific features of TACS and their details.
+	\item System Requirements
+	\item Design Constraints for the application.
+	\item Risks within the scope.
+	\item Any additional information about the development of the application.
 \end{enumerate}
+%This subsection should:
+%\begin{enumerate}
+%	\item Describe what the rest of the SRS contains
+%	\item Explain how the SRS is organized.
+%\end{enumerate}
 
 \section{General Description}
-This section of the SRS should describe the general factors that affect 'the product and its requirements.  It should be made clear that this section does not state specific requirements; it only makes those requirements easier to understand.
+This section will explicitly lay out the product's functionality and constraints as well as compare it to existing products. Possible set backs will be discussed. Details about each requirement will be in the \nameref{Specific Requirements} section of the SRS. 
+ 
+%This section of the SRS should describe the general factors that affect 'the product and its requirements.  It should be made clear that this section does not state specific requirements; it only makes those requirements easier to understand.
 
 \subsection{Product Perspective}
-This subsection of the SRS puts the product into perspective with other related products or
-projects.  (See the IEEE Guide to SRS for more details).
+A vast array of other products that utilize OpenCV are available, but no product will control your Desktop with the movement of your head. There has been much research in the field of physical interactions between the user and their computer. However, the application of organizing and securing your Desktop with this interaction is the novel portion of this software.
+%This subsection of the SRS puts the product into perspective with other related products or projects.  (See the IEEE Guide to SRS for more details).
 
 \subsection{Product Functions}
-This subsection of the SRS should provide a summary of the functions that the software will perform. 
+There will be many available functions the users can utilize. The modular design of the software will allow for additional functions to be easily implemented. \textit{It should be noted that the window functions will be activated with a user-defined hot key.}
+\begin{enumerate}
+	\item A proportional snap to grid set up for users to place desired windows in five different locations. Namely, left, right, top, bottom, and middle. Once all the windows are selected, the middle window will fill the screen and the user will be able to "peer" in the direction of the four other windows to show a preview of them.
+	\item The software will be able to detect when the user is away from the screen, and with a user defined delay-time, be able to lock or put your computer to sleep (all settings can be changed from the SM). 
+	\item The software will organize all open windows into a 3D view (with the illusion of layered windows) for the user to "look" around their desktop and see which window they want to select.
+\end{enumerate}
+
+%This subsection of the SRS should provide a summary of the functions that the software will perform. 
 
 \subsection{User Characteristics}
-This subsection of the SRS should describe those general characteristics of the eventual users of the product that will affect the specific requirements.  (See the IEEE Guide to SRS for more details).
+Any computer user who has trouble with screen space will find this software useful. The general user will be a laptop owner who has a built in camera. 
+%This subsection of the SRS should describe those general characteristics of the eventual users of the product that will affect the specific requirements.  (See the IEEE Guide to SRS for more details).
 
 \subsection{General Constraints}
 This subsection of the SRS should provide a general description of any other items that will
@@ -104,6 +160,7 @@ limit the developer’s options for designing the system. (See the IEEE Guide to
 This subsection of the SRS should list each of the factors that affect the requirements stated in the SRS. These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS. For example, an assumption might be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
 
 \section{Specific Requirements}
+\label{Specific Requirements}
 This will be the largest and most important section of the SRS.  The customer requirements will be embodied within Section 2, but this section will give the D-requirements that are used to guide the project’s software design, implementation, and testing.
 
 Each requirement in this section should be:
