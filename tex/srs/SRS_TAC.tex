@@ -1,16 +1,34 @@
 \documentclass[titlepage]{article}
 
 \usepackage[hidelinks]{hyperref}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage[toc,page]{appendix}
-
+\usepackage{gantt}
 \setcounter{secnumdepth}{5}
+\usepackage{tikz}
+%
+\usetikzlibrary{arrows, trees, positioning, fit, calc, shadows.blur, shapes.symbols}
+
+\def\getfirstword#1{%
+    \begingroup
+    \edef\@tempa{#1\space}%
+    \expandafter\endgroup
+    \expandafter\readwords\@tempa\relax
+}
+\def\readwords#1 #2\relax{%
+      \doword{#1}%  #1 = substr, #2 = rest of string
+}
+\def\doword#1{#1}
+\def\endtestwords{}
+
 
 \addtolength{\oddsidemargin}{-.875in}
 \addtolength{\evensidemargin}{-.875in}
 \addtolength{\textwidth}{1.75in}
+
+\def \TACS {Track and Control System}
 
 \begin{document}
 
@@ -153,8 +171,7 @@ Any computer user who has trouble with screen space will find this software usef
 %This subsection of the SRS should describe those general characteristics of the eventual users of the product that will affect the specific requirements.  (See the IEEE Guide to SRS for more details).
 
 \subsection{General Constraints}
-This subsection of the SRS should provide a general description of any other items that will
-limit the developer’s options for designing the system. (See the IEEE Guide to SRS for a partial list of possible general constraints).
+This subsection of the SRS should provide a general description of any other items that will limit the developer’s options for designing the system. (See the IEEE Guide to SRS for a partial list of possible general constraints).
 
 \subsection{Assumptions and Dependencies}
 This subsection of the SRS should list each of the factors that affect the requirements stated in the SRS. These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS. For example, an assumption might be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
@@ -238,6 +255,217 @@ Will a database be used?  If so, what logical requirements exist for data format
 Catchall section for any additional requirements.
 
 \section{Project Planning and Risk Management}
+
+\def \Ta {\shortstack{Existing \\ Computer Vision \\ Libraries}}
+\def \TaAlt {Research Libraries}
+
+\def \Tb {\shortstack{Learn \\ Dependent \\ APIs}}
+\def \TbAlt {Learn API}
+
+\def \Tc {\shortstack{Database \\ Design}}
+\def \TcAlt {Database Design}
+
+\def \Td {\shortstack{Software \\ Design}}
+\def \TdAlt {Software Design}
+
+\def \Te {\shortstack{Database \\ Development}}
+\def \TeAlt {Database Dev.}
+
+\def \Tf {\shortstack{Software \\ Development}}
+\def \TfAlt {Software Dev.}
+
+\def \Tg {\shortstack{Analysis \\ and \\ Testing}}
+\def \TgAlt {Analysis/Testing}
+
+\def \Th {\shortstack{User \\ Feedback}}
+\def \ThAlt {User Feedback}
+
+\def \Y {2014}
+\def \Da {00/00}
+\def \Db {00/00}
+\def \Dc {00/00}
+\def \Dd {00/00}
+\def \De {00/00}
+\def \Df {00/00}
+\def \Dg {00/00}
+\def \Dh {00/00}
+
+\subsection{Work Breakdown Structure}
+\begin{center}
+	\begin{tikzpicture}[
+	  system/.style={
+	  	rectangle,
+	  	draw,
+	  	top color=blue!0,
+	  	bottom color=black!60!green!60!blue!15,
+	  	rounded corners=.9ex,
+	  	align=center,
+	  	node distance=1.5cm,
+	  	blur shadow={shadow blur steps=5}
+	  },
+	  firsttask/.style={
+		  rectangle,
+		  draw,
+		  top color=blue!7,
+		  bottom color=black!60!green!60!blue!30,
+		  rounded corners=.3ex,
+		  align=center,
+		  blur shadow={shadow blur steps=5}
+	  },
+	  secondtask/.style={
+		  rectangle,
+		  draw,
+		  top color=blue!21,
+		  bottom color=black!60!green!60!blue!60,
+		  text=black,
+		  align=center,
+		  blur shadow={shadow blur steps=5}
+	  },
+	  leaftaskshift/.style={
+		  grow=down,
+		  xshift=-10em
+	  },
+	  leaftask/.style={grow=down},
+	  first/.style={level distance=-2ex},
+	  second/.style={level distance=15ex},
+	  third/.style={level distance=1ex},
+	  fourth/.style={level distance=24ex},
+	  level 1/.style={sibling distance=5em}]
+	    \coordinate  
+	   	% Root
+		child[grow=down,first] {node[system]{\TACS}}
+		[edge from parent fork down]
+			% Children
+			child{node[firsttask, xshift=-21ex, yshift=-2ex] {Product Research\\and\\Analysis}
+				child[leaftaskshift,second] {node[secondtask,xshift=10ex]{\Ta}}
+				child[leaftask,second] {node[secondtask,xshift=6ex]{\Tb}}}
+			child{node[firsttask, xshift=-7ex] {Design\\Model}
+				child[leaftask,second] {node[secondtask,xshift=-3ex,yshift=3ex]{\Tc}}
+				child[leaftask,second] {node[secondtask,xshift=5ex,yshift=-5ex]{\Td}}}
+			child {node[firsttask, xshift=7ex] {Application\\Development}
+				child[leaftask,second] {node[secondtask,xshift=-3ex,yshift=3ex]{\Te}}
+				child[leaftask,second] {node[secondtask,xshift=6ex,yshift=-5ex]{\Tf}}}
+			child {node[firsttask, xshift=21ex]{Evaluate\\Application}
+				child[leaftask,second] {node[secondtask, xshift=-6ex]{\Tg}}
+				child[leaftask,second] {node[secondtask, xshift=6ex]{\Th}}};
+	\end{tikzpicture}
+\end{center}
+
+\subsection{Time Estimation}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |r l| }
+	\hline
+	\textbf{Task} & \textbf{Weeks} \\
+	\hline
+	\TaAlt & i \\
+	\TbAlt & i \\
+	\TcAlt & i \\
+	\TdAlt & i \\
+	\TeAlt & i \\
+	\TfAlt & i \\
+	\TgAlt & i \\
+	\ThAlt & i \\
+	\hline
+	\textbf{Total} & \textbf{X} \\
+	\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Activity Sequencing Diagram}
+
+\begin{center}
+\tikzstyle{arrow}=[draw, -latex]
+\begin{tikzpicture} [
+	->,
+	>=stealth',
+	task/.style={
+		rectangle,
+		draw,
+		left color=blue!15,
+		right color=black!60!green!60!blue!60,
+		rounded corners,
+		blur shadow={shadow blur steps=5}
+	}
+	]
+	\node [task, label={[align=center]\Da/\Y}] (task1) at (0, 0) {\Ta}; 
+	\node [task, label={[align=center]\Db/\Y},right=of task1] (task2) {\Tb}; 
+	\node [task, xshift=5ex, label={[align=center]\Dc/\Y}, minimum width=2cm,right=of task2] (task3) at (3,1) {\Tc}; 
+	\node [task, xshift=5ex, label={[align=center,yshift=-10ex]\Dd/\Y}, minimum width=3cm,right=of task3] (task4) at (3,-1) {\Td}; 
+	\node [task, xshift=0ex, yshift=13.5ex, label={[align=center]\De/\Y}, minimum width=2cm, right=of task4] (task5) {\Te}; 
+	\node [task, xshift=-0.5ex,  yshift=-13.5ex, xshift=-21ex, label={[align=center,yshift=-10ex]\Df/\Y}, minimum width=3cm,right=of task5] (task6) {\Tf}; 
+	\node [task, yshift=7ex, label={[align=center]\Dg/\Y},right=of task6] (task7) {\Tg}; 
+	\node [task, label={[align=center]\Dh/\Y},right=of task7] (task8) {\Th}; 
+	
+	\path [arrow] (task1) -- (task2);
+	\path [arrow] (task2) -- (task3);
+	\path [arrow] (task2) -- (task4);
+	\path [arrow] (task3) -- (task4);
+	\path [arrow] (task4) -- (task5);
+	\path [arrow] (task4) -- (task6);
+	\path [arrow] (task5) -- (task6);
+	\path [arrow] (task6) -- (task7);
+	\path [arrow] (task7) -- (task8);
+\end{tikzpicture}
+%	\begin{tikzpicture}[
+%	  ->,
+%	  >=stealth',
+%	  task/.style={rectangle,draw,fill=blue!15,left color=white,right color=blue!30,rounded corners=.1ex, align=center,blur shadow={shadow blur steps=5}},
+%	  leaftask/.style={grow=right},
+%	  first/.style={level distance=0ex},
+%	  second/.style={level distance=15ex},
+%	  level 1/.style={sibling distance=5em}]
+%	    \coordinate
+%	    child[leaftask,first] {node[task, anchor=east]{Existing\\Computer Vision\\Libraries}}
+%	   % [edge from parent fork right]
+%	    child[leaftask,second] {node[task]{Learn\\Dependent\\APIs}
+%	    child[leaftask,second] {node[task,yshift=5ex]{Database\\Design}}
+%	    child[leaftask,second] {node[task,xshift=4.5ex,yshift=-5ex,minimum width=3cm]{Software\\Design}
+%	    child[leaftask,second] {node[task,xshift=5ex,yshift=10ex]{Database\\Development}
+%	    child[leaftask,second] {node[task,xshift=-9ex,yshift=-10ex,minimum width=4cm]{Software\\Development}
+%	    child[leaftask,second] {node[task,xshift=7ex,yshift=5ex]{Analysis\\and\\Testing}			child[leaftask,second] {node[task]{User\\Feedback}}}}}}};
+%	\end{tikzpicture}
+\end{center}
+
+\subsection{Gantt Chart}
+\begin{gantt}{9}{12}
+	\begin{ganttitle}
+      \titleelement{\Da}{1}
+      \titleelement{\Db}{1}
+      \titleelement{\Dc}{2}
+      \titleelement{\Dd}{1}
+      \titleelement{\De}{2}
+      \titleelement{\Df}{1}
+      \titleelement{\Dg}{2}
+      \titleelement{\Dh}{2}
+	\end{ganttitle}
+	\ganttbar[color=black!60!green!60!blue!60]{\TaAlt}{0}{1}
+	\ganttbar[color=black!60!green!60!blue!60]{\TbAlt}{1}{1}
+	\ganttbar[color=black!60!green!60!blue!60]{\TcAlt}{2}{2}
+	\ganttbar[color=black!60!green!60!blue!60]{\TdAlt}{2}{3}
+	\ganttbar[color=black!60!green!60!blue!60]{\TeAlt}{5}{2}
+	\ganttbar[color=black!60!green!60!blue!60]{\TfAlt}{5}{3}
+	\ganttbar[color=black!60!green!60!blue!60]{\TgAlt}{8}{2}
+	\ganttbar[color=black!60!green!60!blue!60]{\ThAlt}{10}{2}
+\end{gantt}
+
+\subsection{Risk Management}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ | >{\centering}p{3cm} | >{\centering\arraybackslash}m{2cm} | >{\centering\arraybackslash}m{2.5cm} | >{\centering\arraybackslash}m{2cm} | p{6cm} | }
+	\hline
+	\textbf{Risk} & \textbf{Likelihood} & \textbf{Consequences} & \textbf{Total} & \textbf{Fix} \\
+	\hline
+	No camera & 1 & 2 & \cellcolor{green!50}2 & The user can use the mouse as a replacement for the head tracking. \\
+	\hline
+	Risk2 & i & i & \cellcolor{red!50}10- & i \\
+	\hline
+	Risk3 & i & i & \cellcolor{yellow!50}5-9 & i \\
+	\hline
+	Risk4 & i & i & \cellcolor{green!50}1-4 & i \\
+	\hline
+	\end{tabular}
+\end{table}
 
 \begin{appendices}
 Appendices may be used to provide additional (and hopefully helpful) information.  If present, the SRS should explicitly state whether the information contained within an appendix is to be considered as a part of the SRS’s overall set of requirements.
