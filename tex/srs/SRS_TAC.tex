@@ -71,12 +71,8 @@ The following Software Requirements Specification has been accepted and approved
 
 \section{Introduction}
 
-%The introduction to the Software Requirement Specification (SRS) document should provide an overview of the complete SRS document.  While writing this document please remember that this document should contain all of the information needed by a software engineer to adequately design and implement the software product described by the requirements listed in this document.   (Note: the following subsection annotates are largely taken  from the IEEE Guide to SRS).
-
 \subsection{Purpose}
 The Software Requirement Specification for the Track and Control System will explain in detail necessary features that the client purposes and the developers provide. The user base will be focused on anyone who will want to use their computer in a more efficient way and take advantage of their full screen space. 
-
-%What is the purpose of this SRS and the (intended) audience for which it is written.
 
 \subsection{Scope}
 \begin{enumerate}
@@ -92,11 +88,6 @@ The Software Requirement Specification for the Track and Control System will exp
   	\end{enumerate}
   \end{enumerate} 
 \end{enumerate}
-  %\begin{enumerate}
-  	%\item Describe all relevant benefits, objectives, and goals as precisely as possible. For example, to say that one goal is to provide effective reporting capabilities is not as good as saying parameter-driven, user-definable reports with a 2 h turnaround and on-line entry of user parameters.
-  	%\item Be consistent with similar statements in higher-level specifications (for example, the System Requirement Specification) , if they exist.What is the scope of this software product.
-  %\end{enumerate}
-
 
 \subsection{Definitions, Acronyms, and Abbreviations}
 \begin{itemize}
@@ -115,7 +106,7 @@ The Software Requirement Specification for the Track and Control System will exp
 	\begin{itemize}
 		\item SRS - Software Requirements Specification
 		\item OpenCV - Open Computer Vision: An open source library for object tracking via the camera.
-		\item SQLite - A lightweight, low maintenance, self contained database.
+		\item SQLite - A lightweight, low maintenance, self contained local database.
 		\item DB - Database
 		\item RGB - Red, Green, Blue color values.
 		\item HSV - Hue, Saturation, Value.
@@ -130,8 +121,6 @@ The Software Requirement Specification for the Track and Control System will exp
 	\end{itemize}
 \end{itemize}
 
-%This subsection should provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS. This information may be provided by reference to one or more appendixes in the SRS or by reference to other documents.
-
 \subsection{References}
 The list of references below are software documentation that we will be using:
 \begin{enumerate}
@@ -142,13 +131,6 @@ The list of references below are software documentation that we will be using:
 	\item Windows API Index: \href{http://msdn.microsoft.com/en-us/library/hh920508(v=vs.85).aspx}{\color{blue} http://msdn.microsoft.com/en-us/library/hh920508(v=vs.85).aspx}
 	\item QT C++ documentation: \href{http://qt-project.org/}{\color{blue} http://qt-project.org/}
 \end{enumerate}
-%This subsection should:
-%\begin{enumerate}
-	%\item Provide a complete list of all documents referenced elsewhere in the SRS, or in a separate, specified document.
-	%\item Identify each document by title, report number - if applicable - date, and publishing organization.
-	%\item Specify the sources from which the references can be obtained. 
-%This information may be provided by reference to an appendix or to another document.
-%\end{enumerate}
 
 \subsection{Overview}
 The rest of the SRS will contain:
@@ -159,34 +141,23 @@ The rest of the SRS will contain:
 	\item Risks within the scope.
 	\item Any additional information about the development of the application.
 \end{enumerate}
-%This subsection should:
-%\begin{enumerate}
-%	\item Describe what the rest of the SRS contains
-%	\item Explain how the SRS is organized.
-%\end{enumerate}
 
 \section{General Description}
 This section will explicitly lay out the product's functionality and constraints as well as compare it to existing products. Possible set backs will be discussed. Details about each requirement will be in the \nameref{Specific Requirements} section of the SRS. 
- 
-%This section of the SRS should describe the general factors that affect 'the product and its requirements.  It should be made clear that this section does not state specific requirements; it only makes those requirements easier to understand.
 
 \subsection{Product Perspective}
 A vast array of other products that utilize OpenCV are available, but no product will control your Desktop with the movement of your head. There has been much research in the field of physical interactions between the user and their computer. However, the application of organizing and securing your Desktop with this interaction is the novel portion of this software.
-%This subsection of the SRS puts the product into perspective with other related products or projects.  (See the IEEE Guide to SRS for more details).
 
 \subsection{Product Functions}
 There will be many available functions the users can utilize. The modular design of the software will allow for additional functions to be easily implemented. \textit{It should be noted that the window functions will be activated with a user-defined hot key.}
 \begin{enumerate}
 	\item A proportional snap to grid set up for users to place desired windows in five different locations. Namely, left, right, top, bottom, and middle. Once all the windows are selected, the middle window will fill the screen and the user will be able to "peer" in the direction of the four other windows to show a preview of them. 
-	\item The software will organize all open windows into a 3D view (with the illusion of layered windows) for the user to "look" around their desktop and see which window they want to select.
+	\item The software will organize all open windows into a layered view (with the illusion of 3D windows) for the user to "look" around their desktop and see which window they want to select.
 	\item The software will be able to detect when the user is away from the screen, and with a user defined delay-time, be able to lock or put your computer to sleep (all settings can be changed from the SM).
 \end{enumerate}
 
-%This subsection of the SRS should provide a summary of the functions that the software will perform. 
-
 \subsection{User Characteristics}
 Any computer user who has trouble with screen space will find this software useful. The general user will be a laptop owner who has a built in camera. Anyone from developers to web-surfers with a screen space or battery issue will want to use this software.
-%This subsection of the SRS should describe those general characteristics of the eventual users of the product that will affect the specific requirements.  (See the IEEE Guide to SRS for more details).
 
 \subsection{General Constraints}
 \label{General Constraints}
@@ -198,27 +169,10 @@ A camera is assumed to be installed, due to the main functionality incorporating
 The windows control module (WCM) is dependent on C++ due to the Windows API written in that language. It is also assumed that the user is running a Windows operating system.
 
 \section{Specific Requirements}
-This section will explicitly lay out the purposed system design and it's individual requirements.
 \label{Specific Requirements}
-
-%This will be the largest and most important section of the SRS.  The customer requirements will be embodied within Section 2, but this section will give the D-requirements that are used to guide the project’s software design, implementation, and testing.
-
-%Each requirement in this section should be:
-%\begin{itemize}
-%	\item Correct
-%	\item Traceable (both forward and backward to prior/future artifacts)
-%	\item Unambiguous
-%	\item Verifiable (i.e., testable)
-%	\item Prioritized (with respect to importance and/or stability)
-%	\item Complete
-%	\item Consistent
-%	\item Uniquely identifiable (usually via numbering like 3.4.5.6)
-%\end{itemize}
-%
-%Attention should be paid to the carefuly organize the requirements presented in this section so that they may easily accessed and understood.  Furthermore, this SRS is not the software design document, therefore one should avoid the tendency to over-constrain (and therefore design) the software project within this SRS.
+This section will explicitly lay out the purposed system design and it's individual requirements.
 
 \subsection{External Interface Requirements}
-
 \subsubsection{User Interfaces}
 A GUI will be built around the two main modules; the TM, and WCM (which both incorporate the SM). It will be written using the open source C++ framework QT 5.2. The GUI will allow the user to change their settings and act as a liaison between each sub-module. Two tabs views for the TM and WCM will give the user a framework for customizing their TACS environment.
 
@@ -270,7 +224,7 @@ There are three sub-modules to the WCM (with additional features easily added by
 	\end{itemize}
 	\item Windows Perspective (3D)
 	\begin{itemize}[label={}]
-		\item This feature will organize all open windows into a 3D view (with the illusion of layered windows) for the user to "look" around their desktop and see which window they want to select. The windows in the back layer will move at a much slower rate that the windows in the front layer; to give the illusion of a 3D perspective.
+		\item This feature will organize all open windows into a layered view (with the illusion of 3D windows) for the user to "look" around their desktop and see which window they want to select. The windows in the back layer will move at a much slower rate than the windows in the front layer; to give the illusion of a 3D perspective.
 	\end{itemize}
 	\item Sleep Manager
 	\begin{itemize}[label={}]
@@ -411,14 +365,14 @@ A low maintenance database will be used as a simple data storage facility. This 
 \def \ThAlt {User Feedback}
 
 \def \Y {2014}
-\def \Da {00/00}
-\def \Db {00/00}
-\def \Dc {00/00}
-\def \Dd {00/00}
-\def \De {00/00}
-\def \Df {00/00}
-\def \Dg {00/00}
-\def \Dh {00/00}
+\def \Da {1/17}
+\def \Db {2/7}
+\def \Dc {2/14}
+\def \Dd {2/21}
+\def \De {3/7}
+\def \Df {3/28}
+\def \Dg {4/7}
+\def \Dh {4/14}
 
 \subsection{Work Breakdown Structure}
 \begin{center}
@@ -492,16 +446,16 @@ A low maintenance database will be used as a simple data storage facility. This 
 		\hline
 		\textbf{Task} & \textbf{Weeks} \\
 		\hline
-		\TaAlt & i \\
-		\TbAlt & i \\
-		\TcAlt & i \\
-		\TdAlt & i \\
-		\TeAlt & i \\
-		\TfAlt & i \\
-		\TgAlt & i \\
-		\ThAlt & i \\
+		\TaAlt & 1.5 \\
+		\TbAlt & 3 \\
+		\TcAlt & 1 \\
+		\TdAlt & 2 \\
+		\TeAlt & 2 \\
+		\TfAlt & 5 \\
+		\TgAlt & 1 \\
+		\ThAlt & 1 \\
 		\hline
-		\textbf{Total} & \textbf{X} \\
+		\textbf{Total} & \textbf{16.5} \\
 		\hline
 		\end{tabular}
 		};
@@ -530,8 +484,8 @@ A low maintenance database will be used as a simple data storage facility. This 
 	\node [task, xshift=3ex, label={[align=center,yshift=-10ex]\Dd/\Y}, minimum width=3cm,right=of task3] (task4) at (3,-1) {\Td}; 
 	\node [task, xshift=-2ex, yshift=13.5ex, label={[align=center]\De/\Y}, minimum width=2cm, right=of task4] (task5) {\Te}; 
 	\node [task, xshift=-0.5ex,  yshift=-13.5ex, xshift=-21ex, label={[align=center,yshift=-10ex]\Df/\Y}, minimum width=3cm,right=of task5] (task6) {\Tf}; 
-	\node [task, xshift=-3ex, yshift=7ex, label={[align=center]\Dg/\Y},right=of task6] (task7) {\Tg}; 
-	\node [task, xshift=-3ex, label={[align=center]\Dh/\Y},right=of task7] (task8) {\Th}; 
+	\node [task, xshift=-3ex, yshift=13ex, minimum width=3cm, label={[align=center]\Dg/\Y},right=of task6] (task7) {\Tg}; 
+	\node [task, xshift=-15ex, yshift=-13ex, minimum width=2cm, label={[align=center,yshift=-10ex]\Dh/\Y},right=of task7] (task8) {\Th}; 
 	
 	\path [arrow] (task1) -- (task2);
 	\path [arrow] (task2) -- (task3);
@@ -554,17 +508,17 @@ A low maintenance database will be used as a simple data storage facility. This 
 	      \titleelement{\Dc}{2}
 	      \titleelement{\Dd}{1}
 	      \titleelement{\De}{2}
-	      \titleelement{\Df}{1}
+	      \titleelement{\Df}{2}
 	      \titleelement{\Dg}{2}
-	      \titleelement{\Dh}{2}
+	      \titleelement{\Dh}{1}
 		\end{ganttitle}
 		\ganttbar[color=black!60!green!60!blue!60]{\TaAlt}{0}{1}
 		\ganttbar[color=black!60!green!60!blue!60]{\TbAlt}{1}{1}
 		\ganttbar[color=black!60!green!60!blue!60]{\TcAlt}{2}{2}
 		\ganttbar[color=black!60!green!60!blue!60]{\TdAlt}{2}{3}
 		\ganttbar[color=black!60!green!60!blue!60]{\TeAlt}{5}{2}
-		\ganttbar[color=black!60!green!60!blue!60]{\TfAlt}{5}{3}
-		\ganttbar[color=black!60!green!60!blue!60]{\TgAlt}{8}{2}
+		\ganttbar[color=black!60!green!60!blue!60]{\TfAlt}{5}{4}
+		\ganttbar[color=black!60!green!60!blue!60]{\TgAlt}{9}{2}
 		\ganttbar[color=black!60!green!60!blue!60]{\ThAlt}{10}{2}
 	\end{gantt}
 \end{center}
@@ -579,13 +533,7 @@ A low maintenance database will be used as a simple data storage facility. This 
 		\hline
 		\textbf{Risk} & \textbf{Likelihood} & \textbf{Consequences} & \textbf{Total} & \textbf{Fix} \\
 		\hline
-		No camera & 1 & 2 & \cellcolor{green!50}2 & The user can use the mouse as a replacement for the head tracking. \\
-		\hline
-		Risk2 & i & i & \cellcolor{red!50}10- & i \\
-		\hline
-		Risk3 & i & i & \cellcolor{yellow!50}5-9 & i \\
-		\hline
-		Risk4 & i & i & \cellcolor{green!50}1-4 & i \\
+		No camera & 1 & 3 & \cellcolor{green!50}3 & The user can use the mouse as a replacement for the head tracking. \\
 		\hline
 		\end{tabular}
 	};
