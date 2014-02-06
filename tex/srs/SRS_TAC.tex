@@ -171,22 +171,18 @@ Any computer user who has trouble with screen space will find this software usef
 %This subsection of the SRS should describe those general characteristics of the eventual users of the product that will affect the specific requirements.  (See the IEEE Guide to SRS for more details).
 
 \subsection{General Constraints}
-The availability of a web-cam as an input device.  
-
-%This subsection of the SRS should provide a general description of any other items that will limit the developer’s options for designing the system. (See the IEEE Guide to SRS for a partial list of possible general constraints).
+\label{General Constraints}
+The main functionality of the TM will rely heavily on the availability of an input camera; preferably stationed at the center-top of the screen. If said camera is unavailable, the user can select the mouse as a functional alternative. When using the TM, visibility of the person in control will be crucial.
 
 \subsection{Assumptions and Dependencies}
-The software has been designed to be controlled by an input device such as: 
-\begin{itemize}
-	\item Web-cam
-	\item Mouse
-\end{itemize}
+A camera is assumed to be installed, due to the main functionality incorporating a computer vision tracking module. However, there are alternatives that have been discussed in the \nameref{General Constraints} section.
 
-%This subsection of the SRS should list each of the factors that affect the requirements stated in the SRS. These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS. For example, an assumption might be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
+The windows control module (WCM) is dependent on C++ due to the Windows API written in that language. It is also assumed that the user is running a Windows operating system.
 
 \section{Specific Requirements}
 \label{Specific Requirements}
-This will be the largest and most important section of the SRS.  The customer requirements will be embodied within Section 2, but this section will give the D-requirements that are used to guide the project’s software design, implementation, and testing.
+
+%This will be the largest and most important section of the SRS.  The customer requirements will be embodied within Section 2, but this section will give the D-requirements that are used to guide the project’s software design, implementation, and testing.
 
 Each requirement in this section should be:
 \begin{itemize}
@@ -205,15 +201,16 @@ Attention should be paid to the carefuly organize the requirements presented in 
 \subsection{External Interface Requirements}
 
 \subsubsection{User Interfaces}
+A GUI will be built around the two main modules; the TM, and WCM (which both incorporate the SM). It will be written using the open source C++ framework QT 5.2. The GUI will allow the user to change their settings and act as a liaison between each sub-module. Two tabs views for the TM and WCM will give the user a framework for customizing their TACS environment.
 
 \subsubsection{Hardware Interfaces}
-Web-cam
-Mouse
+An installed camera will send raw data to the TM to be processed. No other external hardware dependencies are necessary.
 
 \subsubsection{Software Interfaces}
-MySQL
+The TM will rely on the open source computer vision library, OpenCV 2.4.8, which will be necessary to track the user's movements. In addition, the WCM will utilize the easy system calls with the Windows API build date: 3/25/2010.
 
 \subsubsection{Communications Interfaces}
+The SM will have direct communication to the local SQLite 3.8.3 database to save user settings. The DB will contain past window configurations of the user, specified delays and hot keys, as well as TM configurations.
 
 \subsection{Functional Requirements}
 This section describes specific features of the software project.  If desired, some requirements may be specified in the use-case format and listed in the Use Cases Section.
