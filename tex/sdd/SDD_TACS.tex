@@ -1,0 +1,150 @@
+\documentclass[titlepage]{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[toc,page]{appendix}
+\setcounter{secnumdepth}{5}
+\usepackage{tikz}
+\usepackage{enumitem}
+%
+\usetikzlibrary{arrows, trees, positioning, fit, calc, shadows.blur, shapes.symbols}
+
+\usepackage[top=1.5in, bottom=1.5in, left=2in, right=2in]{geometry}
+
+\def\getfirstword#1{%
+    \begingroup
+    \edef\@tempa{#1\space}%
+    \expandafter\endgroup
+    \expandafter\readwords\@tempa\relax
+}
+\def\readwords#1 #2\relax{%
+      \doword{#1}%  #1 = substr, #2 = rest of string
+}
+\def\doword#1{#1}
+\def\endtestwords{}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\addtolength{\oddsidemargin}{-.875in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+
+\def \TACS {Track and Control System}
+
+\begin{document}
+
+\title{
+\textbf{
+Software Design Description}
+\protect\\
+for the
+\protect\\
+\textbf{
+Track and Control System}
+\protect\\
+{\small Version 1.0}}
+
+\author{Robert Moss, Aaron Periera, Matthew Shrago}
+\maketitle
+
+\newpage
+\tableofcontents{} 
+\newpage
+
+\section{Introduction}
+
+\subsection{Purpose}
+Identify the purpose of this SDD and its intended audience. (e.g. “This software design document describes the architecture and system design of XX. ….”). 
+
+\subsection{Scope}
+Provide a description and scope of the software and explain the goals, objectives and benefits of your project. This will provide the basis for the brief description of your product.
+
+\subsection{Overview}
+Provide an overview of this document and its organization.
+
+\subsection{Reference Material}
+The list of references below are software documentation that we will be using:
+\begin{enumerate}
+	\item OpenCV documentation: \href{http://opencv.org/}{\color{blue} http://opencv.org/}
+	\begin{itemize}
+		\item FaceRecognizer API: \href{http://docs.opencv.org/trunk/modules/contrib/doc/facerec/facerec\_api.html}{\color{blue} http://docs.opencv.org/trunk/modules/contrib/doc/facerec/facerec\_api.html}
+	\end{itemize}
+	\item Windows API Index: \href{http://msdn.microsoft.com/en-us/library/hh920508(v=vs.85).aspx}{\color{blue} http://msdn.microsoft.com/en-us/library/hh920508(v=vs.85).aspx}
+	\item QT C++ documentation: \href{http://qt-project.org/}{\color{blue} http://qt-project.org/}
+\end{enumerate}
+
+\subsection{Definitions, Acronyms, and Abbreviations}
+\begin{itemize}
+	\item Application Specific Definitions
+	\begin{itemize}
+		\item TACS - Track and Control System
+		\item TM - Tracking Module
+		\begin{itemize}
+			\item OT - Object Tracker
+			\item FRT - Facial Recognition Tracker
+		\end{itemize}
+		\item WCM - Windows Control Module
+		\item SM - Settings Module
+	\end{itemize}
+	\item Industry Definitions
+	\begin{itemize}
+		\item SRS - Software Requirements Specification
+		\item OpenCV - Open Computer Vision: An open source library for object tracking via the camera.
+		\item SQLite - A lightweight, low maintenance, self contained local database.
+		\item DB - Database
+		\item RGB - Red, Green, Blue color values.
+		\item HSV - Hue, Saturation, Value.
+		\item API - Application Programming Interface
+		\item C++ - An object oriented programming language.
+		\item GUI - Graphical User Interface
+		\item QT - An API for building GUIs
+	\end{itemize}
+\end{itemize}
+
+\section{System Overview}
+Give a general description of the functionality, context and design of your project. Provide any background information if necessary.
+
+\section{System Architecture}
+\subsection{Architectural Design}
+Develop a modular program structure and explain the relationships between the modules to achieve the complete functionality of the system. This is a high level overview of how responsibilities of the system were partitioned and then assigned to subsystems. Identify each
+high level subsystem and the roles or responsibilities assigned to it. Describe how these subsystems collaborate with each other in order to achieve the desired functionality. Don’t go into too much detail about the individual subsystems. The main purpose is to gain a general understanding of how and why the system was decomposed, and how the individual parts work together. Provide a diagram showing the major subsystems and data repositories and their interconnections. Describe the diagram if required.
+
+\subsection{Decomposition Description}
+Provide a decomposition...
+
+\subsection{Design Rationale}
+Discuss the rationale for selecting the architecture described in 3.1 including critical issues and trade/offs that were considered. You may discuss other architectures that were considered, provided that you explain why you didn’t choose them.
+
+\section{Data Design}
+\subsection{Data Description}
+Explain how the information domain of your system is transformed into data structures. Describe how the major data or system entities are stored, processed and organized. List any databases or data storage items.
+
+\subsection{Data Dictionary}
+Alphabetically list the system entities or major data along with their types and descriptions. If you provided a functional description in Section 3.2, list all the functions and function parameters. If you provided an OO description, list the objects and its attributes, methods and method parameters.
+
+\section{Component Design}
+In this section, we take a closer look at what each component does in a more systematic way. If you gave a functional description in section 3.2, provide a summary of your algorithm for each function listed in 3.2 in procedural description language (PDL) or pseudocode. If you gave an OO description, summarize each object member function for all the objects listed in 3.2 in PDL or pseudocode. Describe any local data when necessary.
+
+
+\section{Human Interface Design}
+\subsection{Overview of User Interface}
+Describe the functionality of the system from the user’s perspective. Explain how the user will be able to use your system to complete all the expected features and the feedback information that will be displayed for the user.
+
+\subsection{Screen Images}
+Display screenshots showing the interface from the user’s perspective. These can be handdrawn or you can use an automated drawing tool. Just make them as accurate as possible. (Graph paper works well.)
+
+\subsection{Screen Objects and Actions}
+A discussion of screen objects and actions associated with those objects.
+
+\section{Requirements Matrix}
+Provide a crossreference that traces components and data structures to the requirements in your SRS document.
+
+Use a tabular format to show which system components satisfy each of the functional requirements from the SRS. Refer to the functional requirements by the numbers/codes that you gave them in the SRS.
+
+\newpage
+\appendix
+\section{Appendix}
+
+\end{document}
