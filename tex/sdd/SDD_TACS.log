@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.8.4)  18 FEB 2014 14:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.8.4)  20 FEB 2014 20:24
 entering extended mode
 **SDD_TACS.tex
 
@@ -522,6 +522,39 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box35
 \enitdp@description=\count123
 )
+(C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count124
+\calc@Bcount=\count125
+\calc@Adimen=\dimen161
+\calc@Bdimen=\dimen162
+\calc@Askip=\skip48
+\calc@Bskip=\skip49
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count126
+\calc@Cskip=\skip50
+)
+(C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+)
+(C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box36
+\AM@toc@title=\toks28
+\c@AM@survey=\count127
+\AM@templatesizebox=\box37
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
 (C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\l
 ibraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
@@ -529,7 +562,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 (C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrary
 arrows.code.tex
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen161
+\arrowsize=\dimen163
 ))
 (C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\l
 ibraries\tikzlibrarytrees.code.tex
@@ -571,38 +604,38 @@ File: pgflibraryshapes.symbols.code.tex 2009/10/27 v2.10 (rcs-revision 1.3)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count124
-\Gm@cntv=\count125
-\c@Gm@tempcnt=\count126
-\Gm@bindingoffset=\dimen162
-\Gm@wd@mp=\dimen163
-\Gm@odd@mp=\dimen164
-\Gm@even@mp=\dimen165
-\Gm@layoutwidth=\dimen166
-\Gm@layoutheight=\dimen167
-\Gm@layouthoffset=\dimen168
-\Gm@layoutvoffset=\dimen169
-\Gm@dimlist=\toks28
+\Gm@cnth=\count128
+\Gm@cntv=\count129
+\c@Gm@tempcnt=\count130
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks29
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Users\mossr\Desktop\WIT\1-COMP566 (Software Dev w-Pierre)\Track-and-Contro
 l\tex\sdd\SDD_TACS.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-\AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring OFF on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+\AtBeginShipoutBox=\box38
+Package hyperref Info: Link coloring OFF on input line 40.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -610,11 +643,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 
 ("C:\Users\mossr\Desktop\WIT\1-COMP566 (Software Dev w-Pierre)\Track-and-Contro
 l\tex\sdd\SDD_TACS.out")
@@ -624,17 +657,17 @@ l\tex\sdd\SDD_TACS.out")
 
 (C:\Users\mossr\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen170
-\scratchbox=\box37
-\nofMPsegments=\count129
-\nofMParguments=\count130
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen171
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count132
+\scratchdimen=\dimen172
+\scratchbox=\box39
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen173
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks31
 ) ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -671,11 +704,11 @@ l\tex\sdd\SDD_TACS.out")
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 51.
+(Font)              <12> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
+(Font)              <8> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
+(Font)              <6> on input line 55.
 [1
 
 {C:/Users/mossr/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -691,74 +724,164 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 \newpage
+l.58 \newpage
               [1]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ¶ in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
-Overfull \hbox (23.77454pt too wide) in paragraph at lines 72--73
+Overfull \hbox (23.77454pt too wide) in paragraph at lines 85--86
 []\OT1/cmr/m/n/10 FaceRecognizer API: [][]http://docs.opencv.org/trunk/modules/
 contrib/doc/facerec/facerec[]api.html[][] 
  []
 
-[2]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+[2] <architectural_design.pdf, id=176, 614.295pt x 794.97pt>
+File: architectural_design.pdf Graphic file (type pdf)
+
+<use architectural_design.pdf>
+Package pdftex.def Info: architectural_design.pdf used on input line 133.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: architectural_design.pdf Graphic file (type pdf)
+ <use architectural_design.pdf>
+Package pdftex.def Info: architectural_design.pdf used on input line 133.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
  [3]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+<architectural_design.pdf, id=187, page=1, 614.295pt x 794.97pt>
+File: architectural_design.pdf Graphic file (type pdf)
+
+<use architectural_design.pdf, page 1>
+Package pdftex.def Info: architectural_design.pdf, page1 used on input line 133
+.
+(pdftex.def)             Requested size: 614.29349pt x 581.57292pt.
+File: architectural_design.pdf Graphic file (type pdf)
+ <use architectural_design.pdf, page 1>
+Package pdftex.def Info: architectural_design.pdf, page1 used on input line 133
+.
+(pdftex.def)             Requested size: 614.58406pt x 581.848pt.
+File: architectural_design.pdf Graphic file (type pdf)
+
+<use architectural_design.pdf, page 1>
+Package pdftex.def Info: architectural_design.pdf, page1 used on input line 133
+.
+(pdftex.def)             Requested size: 614.58406pt x 581.848pt.
+File: architectural_design.pdf Graphic file (type pdf)
+ <use architectural_design.pdf, page 1>
+Package pdftex.def Info: architectural_design.pdf, page1 used on input line 133
+.
+(pdftex.def)             Requested size: 614.58406pt x 581.848pt.
+File: architectural_design.pdf Graphic file (type pdf)
+
+<use architectural_design.pdf, page 1>
+Package pdftex.def Info: architectural_design.pdf, page1 used on input line 133
+.
+(pdftex.def)             Requested size: 614.58406pt x 581.848pt.
+ [4 <C:/Users/mossr/Desktop/WIT/1-COMP566 (Software Dev w-Pierre)/Track-and-Con
+trol/tex/sdd/architectural_design.pdf>]
+<decomposition_description.pdf, id=210, 614.295pt x 794.97pt>
+File: decomposition_description.pdf Graphic file (type pdf)
+
+<use decomposition_description.pdf>
+Package pdftex.def Info: decomposition_description.pdf used on input line 136.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: decomposition_description.pdf Graphic file (type pdf)
+ <use decomposition_description.pdf>
+Package pdftex.def Info: decomposition_description.pdf used on input line 136.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+<decomposition_description.pdf, id=213, page=1, 614.295pt x 794.97pt>
+File: decomposition_description.pdf Graphic file (type pdf)
+
+<use decomposition_description.pdf, page 1>
+Package pdftex.def Info: decomposition_description.pdf, page1 used on input lin
+e 136.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: decomposition_description.pdf Graphic file (type pdf)
+
+<use decomposition_description.pdf, page 1>
+Package pdftex.def Info: decomposition_description.pdf, page1 used on input lin
+e 136.
+(pdftex.def)             Requested size: 460.72011pt x 596.22604pt.
+File: decomposition_description.pdf Graphic file (type pdf)
+
+<use decomposition_description.pdf, page 1>
+Package pdftex.def Info: decomposition_description.pdf, page1 used on input lin
+e 136.
+(pdftex.def)             Requested size: 460.72011pt x 596.22604pt.
+File: decomposition_description.pdf Graphic file (type pdf)
+
+<use decomposition_description.pdf, page 1>
+Package pdftex.def Info: decomposition_description.pdf, page1 used on input lin
+e 136.
+(pdftex.def)             Requested size: 460.72011pt x 596.22604pt.
+File: decomposition_description.pdf Graphic file (type pdf)
+
+<use decomposition_description.pdf, page 1>
+Package pdftex.def Info: decomposition_description.pdf, page1 used on input lin
+e 136.
+(pdftex.def)             Requested size: 460.72011pt x 596.22604pt.
+ [5 <C:/Users/mossr/Desktop/WIT/1-COMP566 (Software Dev w-Pierre)/Track-and-Con
+trol/tex/sdd/decomposition_description.pdf>] [6] <gui/tracking_tab.png, id=243,
+ 621.07031pt x 512.66531pt>
+File: gui/tracking_tab.png Graphic file (type png)
+
+<use gui/tracking_tab.png>
+Package pdftex.def Info: gui/tracking_tab.png used on input line 222.
+(pdftex.def)             Requested size: 496.85692pt x 410.1328pt.
+
+Overfull \hbox (60.16942pt too wide) in paragraph at lines 222--223
+[][] 
+ []
+
+[7] <gui/windows_control_tab.png, id=249, 621.07031pt x 511.9125pt>
+File: gui/windows_control_tab.png Graphic file (type png)
+
+<use gui/windows_control_tab.png>
+Package pdftex.def Info: gui/windows_control_tab.png used on input line 225.
+(pdftex.def)             Requested size: 496.85692pt x 409.53056pt.
+
+Overfull \hbox (60.16942pt too wide) in paragraph at lines 225--226
+[][] 
+ []
+
+[8 <C:/Users/mossr/Desktop/WIT/1-COMP566 (Software Dev w-Pierre)/Track-and-Cont
+rol/tex/sdd/gui/tracking_tab.png>] [9 <C:/Users/mossr/Desktop/WIT/1-COMP566 (So
+ftware Dev w-Pierre)/Track-and-Control/tex/sdd/gui/windows_control_tab.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
+
+[10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
 
 ("C:\Users\mossr\Desktop\WIT\1-COMP566 (Software Dev w-Pierre)\Track-and-Contro
 l\tex\sdd\SDD_TACS.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `SDD_TACS.out' has not changed.
-(rerunfilecheck)             Checksum: 970AF516A4211340D1788BB8BEF1906E;1308.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
+(rerunfilecheck)             Checksum: 06C5CC204836DEE59FB3BD3405FA4714;1616.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 15252 strings out of 493921
- 280315 string characters out of 3147283
- 364364 words of memory out of 3000000
- 18243 multiletter control sequences out of 15000+200000
- 8501 words of font info for 30 fonts, out of 3000000 for 9000
+ 16116 strings out of 493921
+ 295207 string characters out of 3147283
+ 387721 words of memory out of 3000000
+ 19063 multiletter control sequences out of 15000+200000
+ 8847 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,7n,81p,525b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,19n,81p,683b,1016s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb>
-Output written on SDD_TACS.pdf (6 pages, 120690 bytes).
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
+pfb>
+Output written on SDD_TACS.pdf (11 pages, 667651 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 413 words of extra memory for PDF output out of 10000 (max. 10000000)
 

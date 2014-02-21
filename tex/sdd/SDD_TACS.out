@@ -13,9 +13,13 @@
 \BOOKMARK [2][-]{subsection.4.1}{Data Description}{section.4}% 13
 \BOOKMARK [2][-]{subsection.4.2}{Data Dictionary}{section.4}% 14
 \BOOKMARK [1][-]{section.5}{Component Design}{}% 15
-\BOOKMARK [1][-]{section.6}{Human Interface Design}{}% 16
-\BOOKMARK [2][-]{subsection.6.1}{Overview of User Interface}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.2}{Screen Images}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.3}{Screen Objects and Actions}{section.6}% 19
-\BOOKMARK [1][-]{section.7}{Requirements Matrix}{}% 20
-\BOOKMARK [1][-]{appendix.A}{Appendix}{}% 21
+\BOOKMARK [2][-]{subsection.5.1}{TrackingModule}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.2}{WindowsControlModule}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.3}{SettingsModule}{section.5}% 18
+\BOOKMARK [1][-]{section.6}{Human Interface Design}{}% 19
+\BOOKMARK [2][-]{subsection.6.1}{Overview of User Interface}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.2}{Screen Images}{section.6}% 21
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Tracking Tab}{subsection.6.2}% 22
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Windows Control Tab}{subsection.6.2}% 23
+\BOOKMARK [2][-]{subsection.6.3}{Screen Objects and Actions}{section.6}% 24
+\BOOKMARK [1][-]{section.7}{Requirements Matrix}{}% 25
