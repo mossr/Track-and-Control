@@ -1,0 +1,93 @@
+\documentclass[titlepage]{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[toc,page]{appendix}
+\setcounter{secnumdepth}{5}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{indentfirst} 
+
+%
+\usetikzlibrary{arrows, trees, positioning, fit, calc, shadows.blur, shapes.symbols}
+
+\usepackage[top=1.5in, bottom=1.5in, left=2in, right=2in]{geometry}
+
+\def\getfirstword#1{%
+    \begingroup
+    \edef\@tempa{#1\space}%
+    \expandafter\endgroup
+    \expandafter\readwords\@tempa\relax
+}
+\def\readwords#1 #2\relax{%
+      \doword{#1}%  #1 = substr, #2 = rest of string
+}
+\def\doword#1{#1}
+\def\endtestwords{}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\addtolength{\oddsidemargin}{-.875in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+
+\def \TACS {Track and Control System}
+
+\begin{document}
+
+\title{
+\textbf{
+Object Design Description}
+\protect\\
+for the
+\protect\\
+\textbf{
+Track and Control System}
+\protect\\
+{\small Version 1.0}}
+
+\author{Robert Moss, Aaron Periera, Matthew Shrago}
+\maketitle
+
+\newpage
+\tableofcontents{} 
+\newpage
+
+\section{Introduction}
+
+\subsection{Object Design Trade-offs}
+
+\subsubsection{Buy vs. Build}
+
+\subsubsection{Space vs. Speed}
+
+\subsubsection{Delivery Time vs. Functionality}
+
+\subsubsection{Delivery Time vs. Quality}
+
+\subsubsection{Files vs. Databases}
+
+\subsection{Interface Documentation Guidelines}
+
+\subsection{Definitions, Acronyms, and Abbreviations}
+
+
+\section{Packages}
+
+\subsection{Package Diagram}
+
+\subsection{Package Definition}
+
+
+\section{Class Interface}
+
+\subsection{Class Diagram}
+
+\subsection{Class Definition}
+
+
+\end{document}
