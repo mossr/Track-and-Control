@@ -1,4 +1,4 @@
-mkdir tracking_module_build
-cd tracking_module_build
-cmake -G "Visual Studio 10" ..\tracking_module
+mkdir tacs_project_build
+cd tacs_project_build
+cmake -G "Visual Studio 10" ..\tacs_project
 cmake --build . --config Debug
