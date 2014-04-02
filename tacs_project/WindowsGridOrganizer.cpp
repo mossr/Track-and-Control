@@ -29,12 +29,26 @@ HWND right_window = FindWindow(NULL, TEXT(right_window_name));
 HWND top_window = FindWindow(NULL, TEXT(top_window_name));
 HWND bottom_window = FindWindow(NULL, TEXT(bottom_window_name));
 HWND middle_window = FindWindow(NULL, TEXT(middle_window_name));
-double y_speed = 2.0;
+double y_speed = 4.0;
 double x_speed = 2.0;
 double width_ratio = (1/10);
 double height_ratio = (1/5);
 double window_width = 300;
 double window_height = 300;
+
+BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam);
+
+BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)
+{
+
+	char class_name[80];
+	char title[80];
+	GetClassName(hwnd,class_name, sizeof(class_name));
+	GetWindowText(hwnd,title,sizeof(title));
+    cout <<"Window title: "<<title<<endl;
+    cout <<"Class name: "<<class_name<<endl<<endl;
+	return TRUE;
+}
 
 RECT getWindowRect(LPCSTR window) {
 	// Gets the window handler by name
@@ -70,39 +84,44 @@ HWND getLeft() {
 	return left_window;
 }
 
-void setLeft(LPCSTR window) {
-	RECT rect = getWindowRect(window);
+void setLeft(HWND window) {
 	int width = window_width; //ratioWidth(rect, width_ratio);
 	int height = SCREEN_HEIGHT;
 
-	SetWindowPos(left_window, HWND_TOPMOST, 0, 0, width, height, 0);
+	SetWindowPos(window, HWND_NOTOPMOST, 0, 0, width, height, 0);
 }
 
-void setRight(LPCSTR window) {
-	RECT rect = getWindowRect(window);
+void setRight(HWND window) {
 	int width = window_width; //ratioWidth(rect, width_ratio);
 	int height = SCREEN_HEIGHT;
 
-	SetWindowPos(right_window, HWND_TOPMOST, SCREEN_WIDTH - width, 0, width, height, 0);
+	SetWindowPos(window, HWND_NOTOPMOST, SCREEN_WIDTH - width, 0, width, height, 0);
 }
 
-void setTop(LPCSTR window) {
-	RECT rect = getWindowRect(window); 
+void setTop(HWND window) {
 	int width = SCREEN_WIDTH - (window_width*2);
 	int height = window_height; //ratioHeight(rect, height_ratio);
 
-	SetWindowPos(top_window, HWND_TOPMOST, window_width, 0, width, height, 0);
+	SetWindowPos(window, HWND_NOTOPMOST, window_width, 0, width, height, 0);
 }
 
-void setBottom(LPCSTR window) { 
-	RECT rect = getWindowRect(window);
+void setBottom(HWND window) { 
 	int width = SCREEN_WIDTH - (window_width*2);
 	int height = window_height; //ratioHeight(rect, height_ratio);
 
-	SetWindowPos(bottom_window, HWND_TOPMOST, window_width, SCREEN_HEIGHT - height, width, height, 0);
+	SetWindowPos(window, HWND_NOTOPMOST, window_width, SCREEN_HEIGHT + height, width, height, 0);
+	SetWindowPos(window, HWND_NOTOPMOST, window_width, SCREEN_HEIGHT + height, 0, 0, SWP_NOSIZE);
 }
 
-void setMiddle(int x, int y) {
+void setMiddle(HWND window)
+{
+	int width = SCREEN_WIDTH;
+	int height = SCREEN_HEIGHT;
+
+	SetWindowPos(window, HWND_NOTOPMOST, 0, 0, width, height, 0);
+}
+
+void updateMiddle(int x, int y) {
 	HDESK desktop = NULL;
 
 	//EnumWindows(EnumWindowsProc, NULL);
@@ -133,11 +152,6 @@ void setMiddle(int x, int y) {
 	}
 	SetWindowPos(middle_window, HWND_TOP, x_update, y_update, SCREEN_WIDTH, SCREEN_HEIGHT, SWP_SHOWWINDOW);
 	return;
-	
-	//x = -1;
-	//y = -1;
-
-//	SetWindowPos(middle_window, HWND_TOP, 0, 0, 0, 0, SWP_NOSIZE);
 }
 
 void resetMiddle()
@@ -146,8 +160,9 @@ void resetMiddle()
 }
 
 void setGrid() {
-	setLeft(left_window_name);
-	setRight(right_window_name);
-	setBottom(bottom_window_name);
-	setTop(top_window_name);
+	setLeft(left_window);
+	setRight(right_window);
+	setBottom(bottom_window);
+	setTop(top_window);
+	setMiddle(middle_window);
 }

@@ -1,31 +1,35 @@
 #include <set>
 #include <iostream>
 #include <windows.h>
+#include <ctime>
 
 using namespace std;
 	
 const int resolutionX = GetSystemMetrics(SM_CXSCREEN); //Screen Resulution x
 const int resolutionY = GetSystemMetrics(SM_CYSCREEN); //Screen Resulution y
+time_t away_time;
+time_t last_visible_time;
 
 //Will determine if the user has left the field of view and will put the computer to sleep.
-void putTosleep()//POINT pos)
+void putToSleep()//POINT pos)
 {
 		SendMessage(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, (LPARAM) 2);
 }
 
-int main() 
+void sleep(int x, int y, int delay) 
 { 
-	int x = 0, y = 0;
-	POINT tracker; //This point will be generated from the position of the user.
-
-	while(1)
+	if(x == 0 && y == 0)
 	{
-		GetCursorPos(&tracker);
-
-		if(!((tracker.x > 1 && tracker.x < resolutionX - 1)	&&	(tracker.y > 1 && tracker.y < resolutionY - 1)))
+		time(&away_time);
+		int counting_time = away_time - last_visible_time;
+		if(counting_time == delay)
 		{
-			putTosleep();
+			putToSleep();
 			SetCursorPos(resolutionX/2, resolutionY/2);
 		}
+	}
+	else
+	{
+		time(&last_visible_time);
 	}
 }

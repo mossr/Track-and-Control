@@ -4,7 +4,7 @@
 using namespace cv;
 
 void setGrid();
-void setMiddle(int x, int y);
+void updateMiddle(int x, int y);
 void resetMiddle();
 
 #endif

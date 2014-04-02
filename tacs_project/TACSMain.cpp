@@ -9,6 +9,7 @@
 #include "MouseTracker.h"
 
 #include "WindowsGridOrganizer.h"
+#include "SleepManager.h"
 
 using namespace std;
 using namespace cv;
@@ -16,8 +17,10 @@ using namespace cv;
 void getFeed();
 void feature_wgo(int x, int y);
 void feature_wgo_reset();
+void feature_sm(int x, int y, int delay);
 
 int hotkey = VK_LCONTROL;
+int delay = 5; //Seconds
 
 int main( int argc, const char** argv )
 {
@@ -46,25 +49,45 @@ void getFeed()
 			xy = track_mt();
 			break;
 		}
+		
+		// Display the coordinates
 		std::cout << xy << std::endl;
 
 		
-		if(GetAsyncKeyState(hotkey)){
-			feature_wgo(xy.x, xy.y);
-		}
-		else
-		{
-			feature_wgo_reset();
+		// 1 = Windows Grid Organizer
+		// 2 = Windows Perspective
+		// 3 = Sleep Manager
+		int feature = 1;
+		switch(feature){
+		case 1:
+			if(GetAsyncKeyState(hotkey)){
+				feature_wgo(xy.x, xy.y);
+			}
+			else
+			{
+				feature_wgo_reset();
+			}
+			break;
+		case 2:
+			break;
+		case 3:
+			feature_sm(xy.x, xy.y, delay);
+			break;
 		}
 	}
 }
 
 void feature_wgo(int x, int y)
 {
-	setMiddle(x, y);
+	updateMiddle(x, y);
 }
 
 void feature_wgo_reset()
 {
 	resetMiddle();
+}
+
+void feature_sm(int x, int y, int delay)
+{
+	sleep(x, y, delay);
 }

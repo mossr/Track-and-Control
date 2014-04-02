@@ -14,8 +14,8 @@ using namespace cv;
 Point detectAndDisplay( Mat frame );
 
 /** Global variables */
-String face_cascade_name = "..\\opencv\\data\\haarcascades\\haarcascade_frontalface_alt.xml";
-String eyes_cascade_name = "..\\opencv\\data\\haarcascades\\haarcascade_eye_tree_eyeglasses.xml";
+String face_cascade_name = string(getenv("TACS")) + "\\opencv\\data\\haarcascades\\haarcascade_frontalface_alt.xml";
+String eyes_cascade_name =  string(getenv("TACS")) + "\\opencv\\data\\haarcascades\\haarcascade_eye_tree_eyeglasses.xml";
 CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
 string window_name = "Capture - Face detection";
@@ -86,15 +86,18 @@ Point detectAndDisplay( Mat frame )
 		
 		xy = center;
 		
-		for( size_t j = 0; j < eyes.size(); j++ )
+	/*	for( size_t j = 0; j < eyes.size(); j++ )
 		{
 			Point center( faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5 );
 			
 			int radius = cvRound( (eyes[j].width + eyes[j].height)*0.25 );
 			circle( frame, center, radius, Scalar( 255, 0, 0 ), 4, 8, 0 );
 		}
+	*/
 	}
 	//-- Show what you got
-	//  imshow( window_name, frame );
+	bool show_facial_recognition = false;
+	if(show_facial_recognition)
+		imshow( window_name, frame );
 	return xy;
 }

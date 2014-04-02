@@ -201,7 +201,7 @@ Point track_ot()
 	// Camera capture object
 	CvCapture* capture;
 	//Matrix to store each frame of the webcam feed
-	Mat frame;
+	Mat cameraFeed;
 	//background matrix (for subtraction)
 	Mat background;
 	//matrix storage for HSV image
@@ -218,13 +218,13 @@ Point track_ot()
 
 	// Read the video stream
 	capture = cvCaptureFromCAM( 0 );
-	frame = cvQueryFrame( capture );
+	cameraFeed = cvQueryFrame( capture );
 
 	//while(1){
 	if( capture )
 	{
 		//convert frame from BGR to HSV colorspace
-		cvtColor(frame,HSV,COLOR_BGR2HSV);
+		cvtColor(cameraFeed,HSV,COLOR_BGR2HSV);
 		//new subtracted matrix
 		//filter HSV image between values and store filtered image to
 		//threshold matrix
@@ -237,16 +237,18 @@ Point track_ot()
 		//this function will return the x and y coordinates of the
 		//filtered object
 		if(trackObjects)
-			trackFilteredObject(x,y,threshold,frame);
+			trackFilteredObject(x,y,threshold,cameraFeed);
 
 		//mirror image (correct)
 		//flip(cameraFeed, cameraFeed, 1);
 
-		//show frames 
-		//imshow(windowName2,threshold);
-		//imshow(windowName,cameraFeed);
-		//imshow(windowName1,HSV);
-
+		//show frames
+		bool show_windows = true;
+		if(show_windows){
+			imshow(windowName2,threshold);
+			imshow(windowName,cameraFeed);
+			//imshow(windowName1,HSV);
+		}
 
 		//delay 30ms so that screen can refresh.
 		//image will not appear without this waitKey() command

@@ -19,7 +19,9 @@ add_executable (${ProjectName}
 						${CMAKE_SOURCE_DIR}/Tracker.cpp
 						${CMAKE_SOURCE_DIR}/Tracker.h
 						${CMAKE_SOURCE_DIR}/WindowsGridOrganizer.cpp
-						${CMAKE_SOURCE_DIR}/WindowsGridOrganizer.h)
+						${CMAKE_SOURCE_DIR}/WindowsGridOrganizer.h
+						${CMAKE_SOURCE_DIR}/SleepManager.cpp
+						${CMAKE_SOURCE_DIR}/SleepManager.h)
 
 target_link_libraries (${ProjectName} 
 						opencv_calib3d248d.lib
