@@ -20,6 +20,8 @@ add_executable (${ProjectName}
 						${CMAKE_SOURCE_DIR}/Tracker.h
 						${CMAKE_SOURCE_DIR}/WindowsGridOrganizer.cpp
 						${CMAKE_SOURCE_DIR}/WindowsGridOrganizer.h
+						${CMAKE_SOURCE_DIR}/WindowsPerspective.cpp
+						${CMAKE_SOURCE_DIR}/WindowsPerspective.h
 						${CMAKE_SOURCE_DIR}/SleepManager.cpp
 						${CMAKE_SOURCE_DIR}/SleepManager.h)
 

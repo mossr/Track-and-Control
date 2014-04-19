@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <opencv\cv.h>
 #include <Windows.h>
+#include "sqlite3.h"
 
 #include "Tracker.h"
 #include "FacialRecognitionTracker.h"
@@ -9,6 +10,7 @@
 #include "MouseTracker.h"
 
 #include "WindowsGridOrganizer.h"
+#include "WindowsPerspective.h"
 #include "SleepManager.h"
 
 using namespace std;
@@ -17,6 +19,7 @@ using namespace cv;
 void getFeed();
 void feature_wgo(int x, int y);
 void feature_wgo_reset();
+void feature_wp(int x, int y);
 void feature_sm(int x, int y, int delay);
 
 int hotkey = VK_LCONTROL;
@@ -33,7 +36,7 @@ void getFeed()
 	// 1 = ObjectTracker
 	// 2 = FacialRecognitionTracker
 	// 3 = MouseTracker
-	int tracker = 1;
+	int tracker = 3;
 	while(true)
 	{
 
@@ -57,7 +60,7 @@ void getFeed()
 		// 1 = Windows Grid Organizer
 		// 2 = Windows Perspective
 		// 3 = Sleep Manager
-		int feature = 1;
+		int feature = 3;
 		switch(feature){
 		case 1:
 			if(GetAsyncKeyState(hotkey)){
@@ -69,6 +72,9 @@ void getFeed()
 			}
 			break;
 		case 2:
+			if(GetAsyncKeyState(hotkey)){
+				feature_wp(xy.x, xy.y);
+			}
 			break;
 		case 3:
 			feature_sm(xy.x, xy.y, delay);
@@ -85,6 +91,11 @@ void feature_wgo(int x, int y)
 void feature_wgo_reset()
 {
 	resetMiddle();
+}
+
+void feature_wp(int x, int y)
+{
+	showPerspective(x, y);
 }
 
 void feature_sm(int x, int y, int delay)

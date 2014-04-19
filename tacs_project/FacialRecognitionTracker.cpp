@@ -86,17 +86,17 @@ Point detectAndDisplay( Mat frame )
 		
 		xy = center;
 		
-	/*	for( size_t j = 0; j < eyes.size(); j++ )
+		for( size_t j = 0; j < eyes.size(); j++ )
 		{
 			Point center( faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5 );
 			
 			int radius = cvRound( (eyes[j].width + eyes[j].height)*0.25 );
 			circle( frame, center, radius, Scalar( 255, 0, 0 ), 4, 8, 0 );
 		}
-	*/
+	
 	}
 	//-- Show what you got
-	bool show_facial_recognition = false;
+	bool show_facial_recognition = true;
 	if(show_facial_recognition)
 		imshow( window_name, frame );
 	return xy;
