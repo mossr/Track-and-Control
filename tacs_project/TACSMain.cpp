@@ -13,6 +13,8 @@
 #include "WindowsPerspective.h"
 #include "SleepManager.h"
 
+#include "SettingsModule.h"
+
 using namespace std;
 using namespace cv;
 
@@ -27,6 +29,7 @@ int delay = 5; //Seconds
 
 int main( int argc, const char** argv )
 {
+	write_to_db();
 	setGrid();
 	getFeed();
 }
@@ -36,7 +39,7 @@ void getFeed()
 	// 1 = ObjectTracker
 	// 2 = FacialRecognitionTracker
 	// 3 = MouseTracker
-	int tracker = 3;
+	int tracker = 1;
 	while(true)
 	{
 

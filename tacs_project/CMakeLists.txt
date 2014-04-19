@@ -4,9 +4,11 @@ set(ProjectName TACS)
 
 set(CMAKE_DEFAULT_STARTUP_PROJECT ProjectName)
 
-include_directories(${CMAKE_SOURCE_DIR}/../opencv/build/include)
+include_directories(${CMAKE_SOURCE_DIR}/../opencv/build/include
+					${CMAKE_SOURCE_DIR}/../sqlite)
 
-link_directories(${CMAKE_SOURCE_DIR}/../opencv/build/x86/vc10/lib)
+link_directories(${CMAKE_SOURCE_DIR}/../opencv/build/x86/vc10/lib
+				${CMAKE_SOURCE_DIR}/../sqlite)
 
 add_executable (${ProjectName} 
 						${CMAKE_SOURCE_DIR}/FacialRecognitionTracker.cpp
@@ -22,6 +24,8 @@ add_executable (${ProjectName}
 						${CMAKE_SOURCE_DIR}/WindowsGridOrganizer.h
 						${CMAKE_SOURCE_DIR}/WindowsPerspective.cpp
 						${CMAKE_SOURCE_DIR}/WindowsPerspective.h
+						${CMAKE_SOURCE_DIR}/SettingsModule.cpp
+						${CMAKE_SOURCE_DIR}/SettingsModule.h
 						${CMAKE_SOURCE_DIR}/SleepManager.cpp
 						${CMAKE_SOURCE_DIR}/SleepManager.h)
 
@@ -44,5 +48,6 @@ target_link_libraries (${ProjectName}
 						opencv_stitching248d.lib
 						opencv_superres248d.lib
 						opencv_ts248d.lib
-						opencv_videostab248d.lib)
+						opencv_videostab248d.lib
+						sqlite3.lib)
 project(${ProjectName})

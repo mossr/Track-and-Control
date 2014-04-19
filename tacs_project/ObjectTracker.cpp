@@ -11,22 +11,22 @@ using namespace std;
 //these will be changed using trackbars
 
 ////Defaults
-
+/*
 int H_MIN = 0;
 int H_MAX = 256;
 int S_MIN = 0;
 int S_MAX = 256;
 int V_MIN = 0;
 int V_MAX = 256;
-
+*/
 
 // Red hat
-/*int H_MIN = 0;
+int H_MIN = 0;
 int H_MAX = 14;
 int S_MIN = 63;
 int S_MAX = 119;
 int V_MIN = 0;
-int V_MAX = 256;*/
+int V_MAX = 256;
 
 
 
